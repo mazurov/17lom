@@ -1,0 +1,122 @@
+%====================================================================%
+%                  17LOMCON.TEX     October 2015                     %
+% This LaTeX file has adapted various sources for the use in the     %
+%      preparation of the standard Proceedings Volume                %
+%====================================================================%
+
+\documentclass[a4paper]{article}
+
+\usepackage{17lomcon}        % Proceedings volume layout metrics
+\usepackage{ifthen} % for conditional statements
+\usepackage{cite}             % Smart range citations
+\usepackage{epsfig}           % Encapsulated PostScript figure inclusion
+\usepackage{xspace}
+\usepackage{rotating}
+\usepackage{color}
+\usepackage{pifont}
+\usepackage{multirow}
+\usepackage{lineno}
+%% Math
+\usepackage{amsmath} % Adds a large collection of math symbols
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{upgreek} % Adds in support for greek letters in roman typeset
+%\usepackage{epstopdf}
+\graphicspath{{./figs/}} % Make Latex search fig subdir for figures
+
+\bibliographystyle{unsrt}    % for BibTeX - sorted numerical labels by order of
+                             % first citation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                %
+%    BEGINNING OF TEXT                           %
+%                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newboolean{uprightparticles}
+%%\setboolean{uprightparticles}{false} %True for upright particle symbols
+\setboolean{uprightparticles}{true} %True for upright particle symbols
+\newboolean{inbibliography}
+\setboolean{inbibliography}{false} %True once you enter the bibliography
+\input{lhcb-symbols-def.tex}
+\input{localsymbols.tex}
+
+\begin{document}
+\linenumbers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The preamble of the paper
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Study of \chib~meson
+  spectroscopy and production
+  in \proton\proton~collisions at \mbox{$\sqrt{s}=7$}~and~\mbox{$8\tev$}
+   at \lhcb}
+
+\author{Alexander Mazurov \email{alexander.mazurov@cern.ch},  on behalf of the LHCb collaboration
+}
+
+\affiliation{School of Physics and Astronomy,  University of Birmingham}
+
+% You may repeat \author and \affiliation as many times as necessary!
+
+\date{}
+% Print it out!
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The preamble of the paper
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+A study of \chib~meson spectroscopy and production at \lhcb is performed on proton-proton collision data,
+corresponding to~3.0\invfb  of integrated luminosity 
+collected at centre-of-mass energies  \sqs = 7 and 8 \tev.
+The fraction of \YnS~mesons originating from \chib~decays is measured as a function of
+the~\ups~transverse momentum
+in the~rapidity range $2.0 < y^{\PUpsilon} < 4.5$.
+The~radiative transition of the \chibThreeP~meson to \Y3S~is observed for the~first time.
+%%{\color{red}Using assumptions about the mass~splitting for~\chibThreeP~multiplet,} 
+The~\chiboneThreeP mass is determined to be
+\begin{equation*}
+    m_{\chiboneThreeP} = 10515.7^{+2.2}_{-3.9}\stat ^{+1.5}_{-2.1}\syst \mevcc
+\end{equation*}
+where the first uncertainty is statistical and the second is  systematic.
+\end{abstract}
+
+\input{introduction}
+\input{results}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{99}
+
+% \bibitem{Ma:2010vd} Ma, Yan-Qing and Wang, Kai and Chao, Kuang-Ta,  \textit{QCD radiative corrections to $\chi_{cJ}$~production at hadron colliders}, Phys. Rev. D83 (2011) 111503, arXiv:1002.3987
+
+% \bibitem{Kartvelishvili:1978id} V. G. Kartvelishvili, A. K. Likhoded, and S. R. Slabospitsky, \textit{$D$~meson and  $\psi$~meson production in hadronic interactions}, Sov. J. Nucl. Phys. 28 (1978) 678.
+% \bibitem{Berger:1980ni} E. L. Berger and D. Jones, \textit{Inelastic photoproduction of   $J/\psi$~and  $\Upsilon$~by gluons}, Phys.
+% Rev. D23 (1981) 1521
+% \bibitem{Baier:1981uk} {R.~Baier and R.~R\"uckl}, \textit{Hadronic production of  $J/\psi$~and $\Upsilon$: transverse momentum distributions}, Phys. Lett. B102 (1981) 364.
+% \bibitem{Braaten:1994vv} E. Braaten and S. Fleming, \textit{Color octet fragmentation and the $\psi^{\prime}$~surplus at the~Fermilab Tevatron}, Phys. Rev. Lett. 74 (1995) 3327, arXiv:hep-ph/9411365.
+% \bibitem{Bodwin:1994jh} G. T. Bodwin, E. Braaten, and G. P. Lepage, \textit{Rigorous QCD analysis of inclusive annihilation and production of heavy quarkonium}, Phys. Rev. D51 (1995) 1125, arXiv:hep-ph/9407339.
+% \bibitem{Gong:2008sn} B. Gong and J.-X. Wang, \textit{Next-to-leading-order QCD corrections to $J/\psi$~polarization at Tevatron and Large-Hadron-Collider energies}, Phys. Rev. Lett. 100 (2008) 232001, arXiv:0802.3727
+% \bibitem{Campbell:2007ws} J. Campbell, F. Maltoni, and F. Tramontano, \textit{QCD corrections to $J/\psi$~and  $\Upsilon$~production at hadron colliders}, Phys. Rev. Lett. 98 (2007) 252002, arXiv:hep-ph/0703113.
+% \bibitem{Artoisenet:2008fc} P. Artoisenet et al., \textit{$\Upsilon$~production at Fermilab Tevatron and LHC energies}, Phys. Rev.
+% Lett. 101 (2008) 152001, arXiv:0806.3282
+% \bibitem{Lansberg:2008gk} J.~-P. Lansberg, \textit{On the mechanisms of heavy-quarkonium hadroproduction}, Eur. Phys.
+% J. C61 (2009) 693, arXiv:0811.4005.
+% \bibitem{Likhoded:2012hw} A. K. Likhoded, A. V. Luchinsky, and S. V. Poslavsky, \textit{Production of $\chi_{b}$-mesons at LHC}, Phys. Rev. D86 (2012) 074027, arXiv:1203.4893
+% \bibitem{Likhoded:2013aya} A. K. Likhoded, A. V. Luchinsky, and S. V. Poslavsky, \textit{Hadronic production of $\chi_{c}$-mesons at the~LHC}, arXiv:1305.2389
+\bibitem{Aaij:1746553} LHCb collaboration, R. Aaij et al., \textit{Study of $\chi_{b}$ meson production in pp collisions at
+                       $\sqrt{s}=7$ and 8TeV and observation of the decay
+                       $\chi_{b}(3P) \rightarrow \Upsilon(3S) \gamma$}, Eur. Phys. J. C 74,3092 (2014).
+\bibitem{LHCb-PAPER-2012-015} LHCb collaboration, R. Aaij et al., \textit{Measurement of the fraction of $\Upsilon(1S)$ originating from $\chi_b(1P)$ decays in $pp$ collisions at $\sqrt{s}=7$ TeV}, JHEP 11 (2012) 031
+\bibitem{LHCb-CONF-2012-020} LHCb collaboration, \textit{Observation of $\chi_b(3P)$ state at LHCb in pp collisions at $\sqrt{s}=7\tev$}, LHCb-CONF-2012-020
+\bibitem{Aaij:1753641}LHCb collaboration, R. Aaij et al., \textit{Measurement of the $\chi_b(3P)$ mass and of the relative
+                       rate of $\chi_{b1}(1P)$ and $\chi_{b2}(1P)$ production}, JHEP 14, 88 (2014).
+\bibitem{Aad:2011ih} ATLAS collaboration, G. Aad et al., \textit{Observation of a new $\chi_b$~state in radiative transitions to $\Upsilon(1S)$~and $\Upsilon(2S)$~at ATLAS}, Phys. Rev. Lett. 108 (2012) 152001
+\bibitem{Abazov:2012gh} D0 collaboration, V. M. Abazov et al \textit{Observation of a narrow mass state decaying into $\Upsilon(1S) + \gamma$ in $p\bar{p}$~collisions at $\sqrt{s} = 1.96$ TeV}, Phys. Rev. D86 (2012) 031103.
+
+\end{thebibliography}
+\end{document}
