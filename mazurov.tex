@@ -27,22 +27,116 @@
 \bibliographystyle{unsrt}    % for BibTeX - sorted numerical labels by order of
                              % first citation.
 
+
+%% =============================================================================
+\newboolean{inbibliography}
+\setboolean{inbibliography}{false} %True once you enter the bibliography
+%% BEGIN lhcb symbols
+\def\lhcb {\mbox{LHCb}\xspace}
+\def\atlas  {\mbox{ATLAS}\xspace}
+\def\cms    {\mbox{CMS}\xspace}
+\def\Pgamma      {\ensuremath{\upgamma}\xspace}                 
+\def\Pchi        {\ensuremath{\upchi}\xspace}                 
+\def\Ppsi        {\ensuremath{\uppsi}\xspace}                 
+\def\PUpsilon      {\ensuremath{\Upsilon}\xspace}                 
+ 
+
+\def\PJ      {\ensuremath{\mathrm{J}}\xspace}                 
+\def\Pa      {\ensuremath{\mathrm{a}}\xspace}                 
+\def\Pb      {\ensuremath{\mathrm{b}}\xspace}                 
+\def\Pe      {\ensuremath{\mathrm{e}}\xspace}                 
+\def\Pp      {\ensuremath{\mathrm{p}}\xspace}                 
+
+\def\epem       {{\ensuremath{\Pe^+\Pe^-}}\xspace}
+\def\g      {{\ensuremath{\Pgamma}}\xspace}
+\def\bquark    {{\ensuremath{\Pb}}\xspace}
+%% Onia
+
+\def\jpsi     {{\ensuremath{{\PJ\mskip -3mu/\mskip -2mu\Ppsi\mskip 2mu}}}\xspace}
+\def\psitwos  {{\ensuremath{\Ppsi{\mathrm{(2S)}}}}\xspace}
+\def\psiprpr  {{\ensuremath{\Ppsi(3770)}}\xspace}
+\def\etac     {{\ensuremath{\Peta_\cquark}}\xspace}
+\def\chiczero {{\ensuremath{\Pchi_{\cquark 0}}}\xspace}
+\def\chicone  {{\ensuremath{\Pchi_{\cquark 1}}}\xspace}
+\def\chictwo  {{\ensuremath{\Pchi_{\cquark 2}}}\xspace}
+  %\mathchardef\Upsilon="7107
+\def\Y#1S{\ensuremath{\PUpsilon\mathrm{(#1S)}}\xspace}% no space before {...}!
+\def\OneS  {{\Y1S}}
+\def\TwoS  {{\Y2S}}
+\def\ThreeS{{\Y3S}}
+\def\FourS {{\Y4S}}
+\def\FiveS {{\Y5S}}
+
+\def\chic  {{\ensuremath{\Pchi_{\cquark}}}\xspace}
+
+\def\proton      {{\ensuremath{\Pp}}\xspace}
+%% Decays
+\def\BF         {{\ensuremath{\cal B}}\xspace}
+\def\BR         {\BF}
+\newcommand{\decay}[2]{\ensuremath{#1\!\to #2}\xspace}         % {\Pa}{\Pb \Pc}
+\def\to                 {\ensuremath{\rightarrow}\xspace}
+%% Energy and momentum
+\newcommand{\tev}{\ifthenelse{\boolean{inbibliography}}{\ensuremath{~T\kern -0.05em eV}\xspace}{\ensuremath{\mathrm{\,Te\kern -0.1em V}}}\xspace}
+\newcommand{\gev}{\ensuremath{\mathrm{\,Ge\kern -0.1em V}}\xspace}
+\newcommand{\mev}{\ensuremath{\mathrm{\,Me\kern -0.1em V}}\xspace}
+\newcommand{\kev}{\ensuremath{\mathrm{\,ke\kern -0.1em V}}\xspace}
+\newcommand{\ev}{\ensuremath{\mathrm{\,e\kern -0.1em V}}\xspace}
+\newcommand{\gevc}{\ensuremath{{\mathrm{\,Ge\kern -0.1em V\!/}c}}\xspace}
+\newcommand{\mevc}{\ensuremath{{\mathrm{\,Me\kern -0.1em V\!/}c}}\xspace}
+\newcommand{\gevcc}{\ensuremath{{\mathrm{\,Ge\kern -0.1em V\!/}c^2}}\xspace}
+\newcommand{\gevgevcccc}{\ensuremath{{\mathrm{\,Ge\kern -0.1em V^2\!/}c^4}}\xspace}
+\newcommand{\mevcc}{\ensuremath{{\mathrm{\,Me\kern -0.1em V\!/}c^2}}\xspace}
+
+
+\def\invfb   {\ensuremath{\mbox{\,fb}^{-1}}\xspace}
+   
+
+\newcommand{\stat}{\ensuremath{\mathrm{\,(stat)}}\xspace}
+\newcommand{\syst}{\ensuremath{\mathrm{\,(syst)}}\xspace}
+
+%% Energy, Momenta
+\def\sqs   {\ensuremath{\protect\sqrt{s}}\xspace}
+\newcommand{\eg}{\mbox{\itshape e.g.}\xspace}
+
+%% END lhcb symbols
+%% BEGIN locasymbols
+\def\chib           {\ensuremath{\Pchi_{\bquark}}\xspace}
+\def\chibzero       {\ensuremath{\Pchi_{\bquark 0}}\xspace}
+\def\chibone        {\ensuremath{\Pchi_{\bquark 1}}\xspace}
+\def\chibtwo        {\ensuremath{\Pchi_{\bquark 2}}\xspace}
+
+\def\chibOneP       {\ensuremath{\Pchi_{\bquark}\mathrm{(1P)}}\xspace}
+\def\chibTwoP       {\ensuremath{\Pchi_{\bquark}\mathrm{(2P)}}\xspace}
+\def\chibThreeP     {\ensuremath{\Pchi_{\bquark}\mathrm{(3P)}}\xspace}
+
+\def\chiboneOneP    {\ensuremath{\Pchi_{\bquark 1}\mathrm{(1P)}}\xspace}
+\def\chiboneTwoP    {\ensuremath{\Pchi_{\bquark 1}\mathrm{(2P)}}\xspace}
+\def\chiboneThreeP  {\ensuremath{\Pchi_{\bquark 1}\mathrm{(3P)}}\xspace}
+
+\def\chibtwoOneP    {\ensuremath{\Pchi_{\bquark 2}\mathrm{(1P)}}\xspace}
+\def\chibtwoTwoP    {\ensuremath{\Pchi_{\bquark 2}\mathrm{(2P)}}\xspace}
+\def\chibtwoThreeP  {\ensuremath{\Pchi_{\bquark 2}\mathrm{(3P)}}\xspace}
+
+
+\def\ups            {\ensuremath{\PUpsilon}\xspace}
+\def\YnS            {\ensuremath{\PUpsilon\mathrm{(nS)}}\xspace}% no space before {...}!
+
+\def\chibonep       {\ensuremath{\Pchi_{\bquark}\mathrm{(1P)}}\xspace}
+\def\chibtwop       {\ensuremath{\Pchi_{\bquark}\mathrm{(2P)}}\xspace}
+\def\chibthreep     {\ensuremath{\Pchi_{\bquark}\mathrm{(3P)}}\xspace}
+\def\chibmp         {\ensuremath{\Pchi_{\bquark}\mathrm{(mP)}}\xspace}
+
+\def\Rmn           {\ensuremath{\mathcal{R}^{\chibmp}_{\YnS}}\xspace}
+
+%% END localsymbols
+%% =============================================================================
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                %
 %    BEGINNING OF TEXT                           %
 %                                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newboolean{uprightparticles}
-%%\setboolean{uprightparticles}{false} %True for upright particle symbols
-\setboolean{uprightparticles}{true} %True for upright particle symbols
-\newboolean{inbibliography}
-\setboolean{inbibliography}{false} %True once you enter the bibliography
-\input{lhcb-symbols-def.tex}
-\input{localsymbols.tex}
-
 \begin{document}
-\linenumbers
+%\linenumbers
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % The preamble of the paper
@@ -83,31 +177,177 @@ The~\chiboneThreeP mass is determined to be
 \end{equation*}
 where the first uncertainty is statistical and the second is  systematic.
 \end{abstract}
+%% BEGIN Introduction
+\section{Introduction}
+\label{sec:introduction}
 
-\input{introduction}
-\input{results}
+The comparison of experimental data for prompt production of \mbox{S-wave} quarkonia,
+{\it{e.g.}}  \jpsi~or~\Y1S~mesons, with theory predictions requires
+knowledge of feed-down contributions from P-wave quarkonia
+states, \eg~radiative \decay{\chib}{\ups\g}~decays.
+This contribution could significantly influence
+the~interpretation of the~measured polarization of S-wave vector
+quarkonia. In addition, measurements of the~relative production rates of P-wave to S-wave
+quarkonia, as well as the~tensor-to-vector ratios, provide valuable
+information on colour-octet matrix elements.
+
+
+Depending on the~relative orientation of the~quark spins,
+the~\chib~states can be either scalar, vector or tensor mesons, denoted by
+$\Pchi_{\bquark \mathrm{J}}$ with total angular momentum $\mathrm{J}=0,1,2$.
+%%
+The~fractions of \YnS~decays
+originating from \chibmp~decays,
+where $\mathrm{n}$~and~$\mathrm{m}$ are radial quantum numbers of
+the~bound states, are defined as
+\begin{equation}
+  \mathcal{R}^{\chibmp}_{\YnS} \equiv
+  \dfrac
+      {\upsigma  \left( \proton\proton \to \Pchi_{\bquark1}\mathrm{(mP)} \mathrm{X} \right)}
+      {\upsigma  \left( \proton\proton \to \YnS    \mathrm{X} \right)}
+      \times \BR_1
+      + \dfrac
+      {\upsigma  \left( \proton\proton \to \Pchi_{\bquark2}\mathrm{(mP)} \mathrm{X} \right)}
+      {\upsigma  \left( \proton\proton \to \YnS    \mathrm{X} \right)}
+      \times \BR_2
+      \label{eq:r},
+\end{equation}
+%%
+where $\BR_{1(2)}$ denotes the branching fraction 
+for the~decay \decay{\Pchi_{\bquark1(2)}\mathrm{(mP)}}{\YnS \g}.
+Possible contributions from \decay{\Pchi_{\bquark0}\mathrm{(mP)}}{\YnS \g}~decays 
+are neglected because  of the~small branching fraction for the~corresponding
+radiative decays.
+
+A measurement of the fractions $\mathcal{R}^{\chibmp}_{\YnS}$ was
+recently performed by LHCb using calorimetry photons~\cite{Aaij:1746553}.
+This measurements supersede earlier \lhcb~measurements~\cite{LHCb-PAPER-2012-015,LHCb-CONF-2012-020}
+by increasing the~statistical precision and exploiting more decay modes 
+in the rapidity range  $2.0<y<4.5$.
+%% END Introduction
+%% BEGIN Results
+\section{Results}
+\label{sec:Conclusion}
+
+
+The measured fractions \Rmn~\cite{Aaij:1746553} are presented in Fig.~\ref{fig:frac}.
+The results are dominated by the statistical uncertainties, and show no dependence on the \proton\proton~collision energy.
+A~measurement of the~$\mathcal{R}^{\chibthreep}_{\Y3S}$~fraction is performed for the first time.
+The large value of this fraction impacts the~interpretation
+of experimental data on \ups~production and polarization.
+When data on \ups~production and polarization are compared with theory predictions,
+as well as when different theory predictions are compared among themselves, it is often implicitly assumed
+that the~fraction of \Y3S~mesons produced by feed~down from higher states is small.
+The~large measured value of  $\mathcal{R}^{\chibthreep}_{\Y3S}$
+indicates that these assumptions need to be revisited. 
+
+
+\begin{figure*}[t!]
+  \setlength{\unitlength}{1mm}
+  \centering
+  \begin{picture}(150,120)
+    %% =======================================================================
+    \put(0,0){
+      %%\includegraphics*[width=75mm, height=60mm]{frac_ups3s.eps}
+      \includegraphics*[width=75mm, height=60mm]{Fig-c.eps}
+    }
+    \put(2,25){\begin{sideways}$\mathcal{R}^{\chibthreep}_{\Y3S}~~~~~~~~\left[\%\right]$ \end{sideways}}
+    \put(35,0){$p_{\mathrm{T}}^{\Y3S}$}
+    \put(60,0){$\left[\!\gevc\right]$}
+    
+    \put(55,53){\scriptsize \textcolor{blue}{\sqs=7\tev}}
+    \put(55,49){\scriptsize \textcolor{red}{\sqs=8\tev}}
+    
+    \put(15,54){\tiny \textcolor{blue}{\ding{111}} \textcolor{red}{\ding{110}}  $\chibThreeP \to \Y3S \g$}
+      
+    \put(15,40){\lhcb}
+    %% =======================================================================
+    \put(0,60){
+      %%\includegraphics*[width=75mm, height=60mm]{frac_ups1s.eps}
+      \includegraphics*[width=75mm, height=60mm]{Fig-a.eps}
+    }
+    \put(2,85){\begin{sideways}$\mathcal{R}^{\chibmp}_{\Y1S}~~~~~~~~\left[\%\right]$ \end{sideways}}
+    \put(35,60){$p_{\mathrm{T}}^{\Y1S}$}
+    \put(60,60){$\left[\!\gevc\right]$}
+    
+    \put(55,113){\scriptsize \textcolor{blue}{\sqs=7\tev}}
+    \put(55,109){\scriptsize \textcolor{red}{\sqs=8\tev}}
+    
+    \put(14.8,114){\tiny \textcolor{blue}{\ding{109}} \textcolor{red}{\ding{108}} $\chibOneP \to \Y1S \g$}
+    
+    \put(14.8,111){\scalebox{0.6}{\textcolor{blue}{$\vartriangle$} \textcolor{red}{$\blacktriangle$}}\,\tiny$\chibTwoP \to \Y1S \g$}
+    
+    \put(15,108){\tiny \textcolor{blue}{\ding{111}} \textcolor{red}{\ding{110}} $\chibThreeP \to \Y1S \g$}    
+    
+    \put(15,100){\lhcb}
+
+    %% =======================================================================
+    \put(75,60){
+      %%\includegraphics*[width=75mm, height=60mm]{frac_ups2s.eps}
+      \includegraphics*[width=75mm, height=60mm]{Fig-b.eps}
+    }
+    \put(77,85){\begin{sideways}$\mathcal{R}^{\chibmp}_{\Y2S}~~~~~~~~\left[\%\right]$ \end{sideways}}
+    \put(110,60){$p_{\mathrm{T}}^{\Y2S}$}
+    \put(135,60){$\left[\!\gevc\right]$}
+        
+    \put(130,113){\scriptsize \textcolor{blue}{\sqs=7\tev}}
+    \put(130,109){\scriptsize \textcolor{red}{\sqs=8\tev}}
+    
+    
+    \put(89.8,114){\scalebox{0.6}{\textcolor{blue}{$\vartriangle$} \textcolor{red}{$\blacktriangle$}}\,\tiny$\chibTwoP \to \Y2S \g$}
+    
+    \put(90,111){\tiny \textcolor{blue}{\ding{111}} \textcolor{red}{\ding{110}} $\chibThreeP \to \Y2S \g$}  
+
+    \put(90,100){\lhcb}
+
+    % \graphpaper[5](0,0)(150, 120)
+ \end{picture}
+ \caption{\small
+        Fractions \Rmn as functions of $p_{\mathrm{T}}^{\ups}$~\cite{Aaij:1746553}.
+        Points with blue~open\,(red solid) symbols
+        correspond to data collected at $\sqs=7(8)\,\mathrm{TeV}$, respectively.
+        For better visualization the~data points are slightly displaced
+        from the~bin centres.
+        The~inner error bars represent statistical uncertainties,
+        while the~outer error bars indicate statistical and systematic uncertainties added in quadrature. }
+ \label{fig:frac}
+\end{figure*}
+
+
+The recent results supersede earlier \lhcb~measurements~\cite{LHCb-PAPER-2012-015,LHCb-CONF-2012-020}
+by increasing the~statistical precision and exploiting more decay modes and higher transverse 
+momentum regions.
+In particular, the full data sample collected by \lhcb at \mbox{$\sqs=7$}~and 8\tev has been used and
+the~measured fractions $\mathcal{R}^{\chibmp}_{\YnS}$
+are reported for all six kinematically allowed transitions:
+\mbox{\decay{\chibonep}{\Y1S\g}},
+\mbox{\decay{\chibtwop}{\Y1S\g}},
+\mbox{\decay{\chibtwop}{\Y2S\g}},
+\mbox{\decay{\chibthreep}{\Y1S\g}},
+\mbox{\decay{\chibthreep}{\Y2S\g}} and 
+\mbox{\decay{\chibthreep}{\Y3S\g}}
+in bins of transverse momentum of the~\ups~mesons in the rapidity range  $2.0<y<4.5$.
+\lhcb also measured the fractions $\mathcal{R}^{\chibmp}_{\YnS}$ with the radiative photon reconstruted from a $\epem$ pair~$\mathcal{R}^{\chibmp}_{\YnS}$~\cite{Aaij:1753641}. The results are consistent with those obtained in~\cite{Aaij:1746553}.
+
+Using photons converted into electron pairs, and assuming the mass splitting $m_{\chibtwoThreeP}-m_{\chiboneThreeP}=10.5\mevcc$,
+the~mass of the \chiboneThreeP~state is measured to be 
+\begin{equation*} 
+m_{\chiboneThreeP} = 10515.7^{+2.2}_{-3.9}\stat ^{+1.5}_{-2.1}\syst \mevcc,
+\end{equation*}
+This result \cite{Aaij:1753641} is compatible and significantly more precise than 
+the event yield average mass of
+\chiboneThreeP~and
+\chibtwoThreeP~states,
+\mbox{$10\,530 \pm 5\pm 17\mevcc$} and 
+\mbox{$10\,551 \pm 14\pm 17\mevcc$}, 
+reported by the~\atlas~\cite{Aad:2011ih}
+and D0~\cite{Abazov:2012gh} experiments, respectively.
+%% END Results
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % References
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thebibliography}{99}
-
-% \bibitem{Ma:2010vd} Ma, Yan-Qing and Wang, Kai and Chao, Kuang-Ta,  \textit{QCD radiative corrections to $\chi_{cJ}$~production at hadron colliders}, Phys. Rev. D83 (2011) 111503, arXiv:1002.3987
-
-% \bibitem{Kartvelishvili:1978id} V. G. Kartvelishvili, A. K. Likhoded, and S. R. Slabospitsky, \textit{$D$~meson and  $\psi$~meson production in hadronic interactions}, Sov. J. Nucl. Phys. 28 (1978) 678.
-% \bibitem{Berger:1980ni} E. L. Berger and D. Jones, \textit{Inelastic photoproduction of   $J/\psi$~and  $\Upsilon$~by gluons}, Phys.
-% Rev. D23 (1981) 1521
-% \bibitem{Baier:1981uk} {R.~Baier and R.~R\"uckl}, \textit{Hadronic production of  $J/\psi$~and $\Upsilon$: transverse momentum distributions}, Phys. Lett. B102 (1981) 364.
-% \bibitem{Braaten:1994vv} E. Braaten and S. Fleming, \textit{Color octet fragmentation and the $\psi^{\prime}$~surplus at the~Fermilab Tevatron}, Phys. Rev. Lett. 74 (1995) 3327, arXiv:hep-ph/9411365.
-% \bibitem{Bodwin:1994jh} G. T. Bodwin, E. Braaten, and G. P. Lepage, \textit{Rigorous QCD analysis of inclusive annihilation and production of heavy quarkonium}, Phys. Rev. D51 (1995) 1125, arXiv:hep-ph/9407339.
-% \bibitem{Gong:2008sn} B. Gong and J.-X. Wang, \textit{Next-to-leading-order QCD corrections to $J/\psi$~polarization at Tevatron and Large-Hadron-Collider energies}, Phys. Rev. Lett. 100 (2008) 232001, arXiv:0802.3727
-% \bibitem{Campbell:2007ws} J. Campbell, F. Maltoni, and F. Tramontano, \textit{QCD corrections to $J/\psi$~and  $\Upsilon$~production at hadron colliders}, Phys. Rev. Lett. 98 (2007) 252002, arXiv:hep-ph/0703113.
-% \bibitem{Artoisenet:2008fc} P. Artoisenet et al., \textit{$\Upsilon$~production at Fermilab Tevatron and LHC energies}, Phys. Rev.
-% Lett. 101 (2008) 152001, arXiv:0806.3282
-% \bibitem{Lansberg:2008gk} J.~-P. Lansberg, \textit{On the mechanisms of heavy-quarkonium hadroproduction}, Eur. Phys.
-% J. C61 (2009) 693, arXiv:0811.4005.
-% \bibitem{Likhoded:2012hw} A. K. Likhoded, A. V. Luchinsky, and S. V. Poslavsky, \textit{Production of $\chi_{b}$-mesons at LHC}, Phys. Rev. D86 (2012) 074027, arXiv:1203.4893
-% \bibitem{Likhoded:2013aya} A. K. Likhoded, A. V. Luchinsky, and S. V. Poslavsky, \textit{Hadronic production of $\chi_{c}$-mesons at the~LHC}, arXiv:1305.2389
 \bibitem{Aaij:1746553} LHCb collaboration, R. Aaij et al., \textit{Study of $\chi_{b}$ meson production in pp collisions at
                        $\sqrt{s}=7$ and 8TeV and observation of the decay
                        $\chi_{b}(3P) \rightarrow \Upsilon(3S) \gamma$}, Eur. Phys. J. C 74,3092 (2014).
